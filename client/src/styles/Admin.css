@@ -42,16 +42,18 @@
 
 
 .admin-requests-container{
-
-    margin: 10vh 0 3vh 3vw;
+    margin: 10vh auto 3vh auto;
     border: 1px solid #1918182b;
     width: 70%;
     padding: 2vh 2vw;
 }
 
+
 .admin-requests-container h3{
 
-    color: rgb(55, 84, 108);
+    color: rgb(196, 40, 40);
+     text-align: center;
+
 
 }
 

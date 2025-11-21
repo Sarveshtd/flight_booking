@@ -25,36 +25,52 @@ const AllUsers = () => {
 
       <div class="all-users-page">
         <h2>All Users</h2>
-        <div class="all-users">
-
-        {users.filter(user=> user.usertype === 'customer').map((user)=>{
-            return(
-
-              <div class="user" key={user._id}>
-                  <p><b>UserId </b>{user._id}</p>
-                  <p><b>Username </b>{user.username}</p>
-                  <p><b>Email </b>{user.email}</p>
-              </div>
-            )
-          })}
-            
+        <div class="all-users-table-container">
+          <table className="users-table">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.filter(user=> user.usertype === 'customer').map((user)=>{
+                  return(
+                    <tr key={user._id}>
+                        <td>{user._id}</td>
+                        <td>{user.username}</td>
+                        <td>{user.email}</td>
+                    </tr>
+                  )
+              })}
+            </tbody>
+          </table>
         </div>
 
 
         <h2>Flight Operators</h2>
-        <div class="all-users">
-
-        {users.filter(user=> user.usertype === 'flight-operator').map((user)=>{
-            return(
-
-              <div class="user" key={user._id}>
-                  <p><b>Id </b>{user._id}</p>
-                  <p><b>Flight Name </b>{user.username}</p>
-                  <p><b>Email </b>{user.email}</p>
-              </div>
-            )
-          })}
-            
+        <div class="all-users-table-container">
+          <table className="users-table">
+            <thead>
+              <tr>
+                <th>Operator ID</th>
+                <th>Flight Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.filter(user=> user.usertype === 'flight-operator').map((user)=>{
+                  return(
+                    <tr key={user._id}>
+                        <td>{user._id}</td>
+                        <td>{user.username}</td>
+                        <td>{user.email}</td>
+                    </tr>
+                  )
+              })}
+            </tbody>
+          </table>
         </div>  
 
     </div>
